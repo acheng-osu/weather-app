@@ -26,6 +26,6 @@ def search_by_zip(zip_code):
     else:
         print("Error in Geo HTTP request with code: " + str(geo_response.status_code))
 
-
-print(search_by_zip(92354))
+if __name__ == "__main__":
+    print(search_by_zip(92354))
 
