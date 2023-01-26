@@ -13,3 +13,6 @@
 
 # adding pycache
 __pycache__/
+
+# adding config.py which has api key
+config.py

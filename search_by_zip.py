@@ -1,9 +1,9 @@
 import requests, json
+from config import API_KEY
 
 GEO_URL = "http://api.openweathermap.org/geo/1.0/zip?zip="
 WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather?lat="
 COUNTRY_CODE = "US"
-API_KEY = "3db696f6d531856a3aa61c7c32ea1174"
 
 def search_by_zip(zip_code):
     geo_full_url = GEO_URL + str(zip_code) + "," + COUNTRY_CODE + "&appid=" + API_KEY
