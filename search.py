@@ -5,9 +5,15 @@ def search():
     while True:
         choice = input("Please choose to either 1) Search by City Name or 2) Search by Zip Code: ")
 
-        if choice == 1:
-            pass
-        elif choice == 2:
-            pass
+        if choice == "1":
+            city_name = input("Please input the city name: ")
+            state_code = input("Please input the 2 character state code: ")
+            return search_by_city(city_name, state_code)
+        elif choice == "2":
+            zip_code = input("Please input the 5-digit US zip code: ")
+            return search_by_zip(int(zip_code))
+        elif choice == "x":
+            break
         else:
-            print("That is not one of the options. Please input 1 to search by city name or 2 to search by zip code.")
+            print("That is not one of the options. Please input 1 to search by city name or 2 to search by zip code. \
+                If you would like to exit the search, input x.")

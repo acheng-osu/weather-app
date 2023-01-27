@@ -14,17 +14,16 @@ def search_by_zip(zip_code):
         coordinates = (data["lat"], data["lon"])
 
         one_call_full_url = WEATHER_URL + str(coordinates[0]) + "&lon=" + str(coordinates[1]) + "&appid=" + API_KEY + "&units=imperial"
-        print(one_call_full_url)
         one_call_response = requests.get(one_call_full_url)
 
         if one_call_response.status_code == 200:
             data = one_call_response.json()
             return(data)     
         else:
-            print("Error in One Call HTTP request with code: " + str(one_call_response.status_code))
+            return("Error in One Call HTTP request with code: " + str(one_call_response.status_code))
 
     else:
-        print("Error in Geo HTTP request with code: " + str(geo_response.status_code))
+        return("Error in Geo HTTP request with code: " + str(geo_response.status_code))
 
 if __name__ == "__main__":
     print(search_by_zip(92354))
