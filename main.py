@@ -10,6 +10,8 @@ def main():
 
         if user_choice == "s":
             print(search())
+        elif user_choice == "h":
+            display_help_menu()
         elif user_choice == "x":
             break
         else:

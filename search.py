@@ -6,6 +6,7 @@ def search():
         choice = input("Please choose to either 1) Search by City Name or 2) Search by Zip Code: ")
 
         if choice == "1":
+            print("Note: additional steps required if there are multiple cities with the same name")
             city_name = input("Please input the city name: ")
             state_code = input("Please input the 2 character state code: ")
             return search_by_city(city_name, state_code)
