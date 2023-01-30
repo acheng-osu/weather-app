@@ -6,12 +6,14 @@ def main():
     display_main_menu()
     
     while True:
-        user_choice = input("Make your selection: ")
+        user_choice = input("Make your selection: ").lower().strip()
 
         if user_choice == "s":
             print(search())
         elif user_choice == "h":
             display_help_menu()
+        elif user_choice == "m":
+            display_main_menu()
         elif user_choice == "x":
             break
         else:
