@@ -15,15 +15,27 @@ def display_help_menu():
 
 
     -------------------------------------------------
-    Performing a Search
+    Performing a Single Location Search
     -------------------------------------------------
-    To perform a search, simply enter "s" into the command line prompt. Once entered, you will be prompted to 
+    To perform a single location search, simply enter "s" into the command line prompt. Once entered, you will be prompted to 
     search by either 1) City Name or 2) Zip Code. Once you make your selection, you will be prompted to enter your search input.
     Please ensure that the input of your choosing is a valid United States Zip Code if you are searching by zip code, or a valid City Name, State
     combination if you are searching by city name. If your search input is invalid, your search will not be completed.
 
     If your search input is valid, weather information for the location you have selected will be displayed. At this point, you can either perform
-    another search by entering "s" into the command line prompt again or choose another one of the input options.
+    another single location search by entering "s" into the command line prompt again or choose another one of the input options.
+
+
+    -------------------------------------------------
+    Performing an Area Search
+    -------------------------------------------------
+    To perform an area search, simply enter "a" into the command line prompt. Once entered, you will be prompted to enter a 5 digit Zip Code. 
+    Once you make your selection, you will be prompted to enter a number designating the mile radius for the area search.
+    Please ensure that the input of your choosing is a valid United States Zip Code. If your search input is invalid, your search will not be completed.
+
+    If your search input is valid, weather information for the location and its neighboring zip code(s) will be displayed. At this point, you can either perform
+    another area search by entering "a" into the command line prompt again or choose another one of the input options.
+
 
 
     -------------------------------------------------
