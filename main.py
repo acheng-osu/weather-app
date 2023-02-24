@@ -16,7 +16,9 @@ def main():
         elif user_choice == "m":
             display_main_menu()
         elif user_choice == "a":
-            print(area_search())
+            area_search_output = area_search()
+            print("response from Raymond's microservice: " + str(area_search_output[1]))
+            print(area_search_output[0])
         elif user_choice == "x":
             break
         else:

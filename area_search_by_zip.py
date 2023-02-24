@@ -24,7 +24,7 @@ def area_search():
                 for zip in dumpableStringAsArray:
                     weather_array.append(search_by_zip(zip))
 
-                return weather_array
+                return (weather_array, responseString)
             elif zipCodeInput == "x":
                 break
             else:
