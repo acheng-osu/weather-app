@@ -18,8 +18,8 @@ def main():
             display_main_menu()
         elif user_choice == "a":
             area_search_output = area_search()
-            print("response from Raymond's microservice: " + str(area_search_output[1]))
-            print(area_search_output[0])
+            for zip in area_search_output:
+                display_weather_data(zip)
         elif user_choice == "x":
             break
         else:

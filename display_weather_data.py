@@ -3,9 +3,12 @@ from geopy.geocoders import Nominatim
 
 
 def display_weather_data(data_dict):
+    state_zip = zip_code_from_coords(
+        data_dict["coord"]["lat"], data_dict["coord"]["lon"])
+    print("-----------------------------------------------------------")
+    print("Weather information for: " +
+          data_dict["name"] + ", " + state_zip[0] + ", " + state_zip[1])
     print("-------------------------------------------------")
-    print("location: " +
-          str(zip_code_from_coords(data_dict["coord"]["lat"], data_dict["coord"]["lon"])))
     print("coordinates: " +
           str(data_dict["coord"]["lon"]) + "," + str(data_dict["coord"]["lat"]))
     print("weather description: " + data_dict["weather"][0]["description"])
@@ -18,7 +21,7 @@ def display_weather_data(data_dict):
     print("cloudiness (%): " + str(data_dict["clouds"]["all"]))
     print("sunrise: " + timestamp_to_string(data_dict["sys"]["sunrise"]))
     print("sunset: " + timestamp_to_string(data_dict["sys"]["sunset"]))
-    print("-------------------------------------------------")
+    print("-----------------------------------------------------------")
 
 
 def timestamp_to_string(secs):
@@ -32,6 +35,6 @@ def zip_code_from_coords(lat, lon):
     location = geolocator.reverse((lat, lon))
     if 'address' in location.raw.keys():
         if 'postcode' in location.raw['address'].keys():
-            return location.raw['address']['town'], location.raw['address']['state'], location.raw['address']['postcode']
+            return location.raw['address']['state'], location.raw['address']['postcode']
     else:
         None
