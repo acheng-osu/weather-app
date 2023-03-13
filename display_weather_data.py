@@ -18,7 +18,6 @@ def display_weather_data(data_dict):
           str(data_dict["visibility"]))
     print("wind speed (mph): " + str(data_dict["wind"]["speed"]))
     print("cloudiness (%): " + str(data_dict["clouds"]["all"]))
-    print("cloudiness (%): " + str(data_dict["clouds"]["all"]))
     print("sunrise: " + timestamp_to_string(data_dict["sys"]["sunrise"]))
     print("sunset: " + timestamp_to_string(data_dict["sys"]["sunset"]))
     print("-----------------------------------------------------------")

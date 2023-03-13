@@ -16,5 +16,5 @@ def search():
         elif choice == "x":
             break
         else:
-            print("That is not one of the options. Please input 1 to search by city name or 2 to search by zip code. \
-                If you would like to exit the search, input x.")
+            print("That is not one of the options. Please input 1 to search by city name or 2 to search by zip code.")
+            print("If you would like to exit the search, input x.")
